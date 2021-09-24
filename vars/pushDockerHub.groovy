@@ -5,7 +5,7 @@ pipeline {
  agent any
   environment {
     registry = "gsingh563/${projectName}"
-    registryCredential = 'docker_credentials'
+    registryCredential = 'Docker_credentials'
     dockerImage = ''
   }
   stages {
@@ -25,11 +25,11 @@ pipeline {
         }
       }
     }
- //   stage('Remove old docker image') {
- //     steps{
-   //     sh "docker rmi $registry:$BUILD_NUMBER"
-   //   }
+    stage('Remove old docker image') {
+      steps{
+        sh "docker rmi $registry:$BUILD_NUMBER"
+      }
     }
   }
 }
-//}
+}
