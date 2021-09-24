@@ -5,7 +5,7 @@ pipeline {
  agent any
   environment {
     registry = "gsingh563/${projectName}"
-    registryCredential = 'Docker_credentials'
+    registryCredential = 'Docker-credentials'
     dockerImage = ''
   }
   stages {
